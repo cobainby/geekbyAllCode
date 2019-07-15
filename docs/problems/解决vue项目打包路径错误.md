@@ -5,7 +5,7 @@
 ### 解决办法：
 *更改build/utils.js文件中的ExtractTextPlugin插件的options相关配置*
 
-```
+```js
 if(option.extract){
   return ExtractTextPlugin.extract({
     use:loaders,
@@ -17,3 +17,4 @@ if(option.extract){
 }
 
 ```
+
