@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:docs": "vuepress dev docs",
     "build:docs": "vuepress build docs",
-    "blogpush":"bash blogpush.sh"
+    "blogpush": "bash blogpush.sh"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/cobainby/geekbyAllCode/issues"
   },
-  "homepage": "https://github.com/cobainby/geekbyAllCode#readme"
+  "homepage": "https://github.com/cobainby/geekbyAllCode#readme",
+  "dependencies": {
+    "vuepress-theme-track": "^1.0.12"
+  }
 }
