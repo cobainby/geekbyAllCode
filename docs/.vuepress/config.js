@@ -26,7 +26,7 @@ module.exports = {
 
         },
         {
-          text: '疑惑困难',
+          text: '困惑',
           link: '/problems/' // '/'默认为docs文件夹下的README.md文件
 
         },
