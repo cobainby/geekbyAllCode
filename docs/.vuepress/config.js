@@ -4,6 +4,8 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
+  // base:'/geekbyAllCode/',
+  // dest:'geekbyAllCode',
   theme: 'track',
   port: 3000,
   // Google Analytics ID
