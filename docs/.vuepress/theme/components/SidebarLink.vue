@@ -1,25 +1,9 @@
 <script>
 import { isActive, hashRE, groupHeaders } from '../util'
-
 export default {
   functional: true,
-
-  props: ['item', 'sidebarDepth'],
-
-  render (h,
-    {
-      parent: {
-        $page,
-        $site,
-        $route,
-        $themeConfig,
-        $themeLocaleConfig
-      },
-      props: {
-        item,
-        sidebarDepth
-      }
-    }) {
+  props: ['item'],
+  render (h, { parent: { $page, $site, $route }, props: { item }}) {
     // use custom active class matching logic
     // due to edge case of paths ending with / + hash
     const selfActive = isActive($route, item.path)
@@ -28,20 +12,12 @@ export default {
     const active = item.type === 'auto'
       ? selfActive || item.children.some(c => isActive($route, item.basePath + '#' + c.slug))
       : selfActive
-    const link = item.type === 'external'
-      ? renderExternal(h, item.path, item.title || item.path)
-      : renderLink(h, item.path, item.title || item.path, active)
-
-    const configDepth = $page.frontmatter.sidebarDepth
-      || sidebarDepth
-      || $themeLocaleConfig.sidebarDepth
-      || $themeConfig.sidebarDepth
-
+    const link = renderLink(h, item.path, item.title || item.path, active)
+    const configDepth = $page.frontmatter.sidebarDepth != null
+      ? $page.frontmatter.sidebarDepth
+      : $site.themeConfig.sidebarDepth
     const maxDepth = configDepth == null ? 1 : configDepth
-
-    const displayAllHeaders = $themeLocaleConfig.displayAllHeaders
-      || $themeConfig.displayAllHeaders
-
+    const displayAllHeaders = !!$site.themeConfig.displayAllHeaders
     if (item.type === 'auto') {
       return [link, renderChildren(h, item.children, item.basePath, $route, maxDepth)]
     } else if ((active || displayAllHeaders) && item.headers && !hashRE.test(item.path)) {
@@ -52,7 +28,6 @@ export default {
     }
   }
 }
-
 function renderLink (h, to, text, active) {
   return h('router-link', {
     props: {
@@ -66,7 +41,6 @@ function renderLink (h, to, text, active) {
     }
   }, text)
 }
-
 function renderChildren (h, children, path, route, maxDepth, depth = 1) {
   if (!children || depth > maxDepth) return null
   return h('ul', { class: 'sidebar-sub-headers' }, children.map(c => {
@@ -77,28 +51,13 @@ function renderChildren (h, children, path, route, maxDepth, depth = 1) {
     ])
   }))
 }
-
-function renderExternal (h, to, text) {
-  return h('a', {
-    attrs: {
-      href: to,
-      target: '_blank',
-      rel: 'noopener noreferrer'
-    },
-    class: {
-      'sidebar-link': true
-    }
-  }, [text, h('OutboundLink')])
-}
 </script>
 
 <style lang="stylus">
 .sidebar .sidebar-sub-headers
   padding-left 1rem
   font-size 0.95em
-
 a.sidebar-link
-  font-size 1em
   font-weight 400
   display inline-block
   color $textColor
@@ -107,6 +66,8 @@ a.sidebar-link
   line-height 1.4
   width: 100%
   box-sizing: border-box
+  word-break break-all
+  font-size px2rem(14px)
   &:hover
     color $accentColor
   &.active
@@ -119,6 +80,7 @@ a.sidebar-link
     padding-top 0.25rem
     padding-bottom 0.25rem
     border-left none
+    font-size px2rem(12px)
     &.active
       font-weight 500
 </style>

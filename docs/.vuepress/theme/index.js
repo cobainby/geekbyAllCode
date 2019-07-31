@@ -1,43 +1,57 @@
 const path = require('path')
 
-// Theme API.
-module.exports = (options, ctx) => ({
-  alias() {
-    const { themeConfig, siteConfig } = ctx
-    // resolve algolia
-    const isAlgoliaSearch = (
-      themeConfig.algolia
-      || Object.keys(siteConfig.locales && themeConfig.locales || {})
-        .some(base => themeConfig.locales[base].algolia)
-    )
-    return {
-      '@AlgoliaSearchBox': isAlgoliaSearch
-        ? path.resolve(__dirname, 'components/AlgoliaSearchBox.vue')
-        : path.resolve(__dirname, 'noopModule.js')
-    }
-  },
-  extend: '@vuepress/theme-default',
+module.exports = {
+  layoutDir: './src/layouts',
   plugins: [
-    ['@vuepress/active-header-links', options.activeHeaderLinks],
-    '@vuepress/search',
-    '@vuepress/plugin-nprogress',
-    ['container', {
-      type: 'tip',
-      defaultTitle: {
-        '/zh/': '提示'
-      }
+    ['@vuepress/back-to-top'],
+    ['@vuepress/medium-zoom'],
+    ['@vuepress/google-analytics'],
+    ['@vuepress/active-header-links'],
+    ['@vuepress/register-components', {
+      componentsDir: [
+        path.resolve(__dirname, 'components')
+      ]
     }],
-    ['container', {
-      type: 'warning',
-      defaultTitle: {
-        '/zh/': '注意'
-      }
+    ['@yubisaki/blog', {
+      pageEnhancers: [
+        {
+          when: ({ frontmatter }) => frontmatter.pageLayout === 'Activity',
+          frontmatter: { layout: 'Activity' }
+        },
+        {
+          when: ({ frontmatter }) => frontmatter.pageLayout === 'Home',
+          frontmatter: { layout: 'Home' }
+        },
+        {
+          when: ({ frontmatter }) => frontmatter.pageLayout === 'Layout',
+          frontmatter: { layout: 'Layout' }
+        },
+        {
+          when: ({ frontmatter }) => frontmatter.pageLayout === 'Weekly',
+          frontmatter: { layout: 'Weekly' }
+        },
+        {
+          when: ({ frontmatter }) => frontmatter.type === 'weekly',
+          frontmatter: { layout: 'Page' }
+        },
+        {
+          when: ({ path }) => path.startsWith('/weekly'),
+          frontmatter: { showAuthor: false, next: false, sidebar: false }
+        }
+      ]
     }],
-    ['container', {
-      type: 'danger',
-      defaultTitle: {
-        '/zh/': '警告'
-      }
-    }]
-  ]
-})
+    ['@yubisaki/pagination'],
+    'flowchart',
+    [require('./util/plugin')]
+  ],
+  chainWebpack: config => {
+    const patterns = [
+      path.resolve(__dirname, './styles/config.styl'),
+      path.resolve(__dirname, './styles/mixins.styl')
+    ]
+    config.module.rule('stylus').oneOf('normal')
+                  .use('style-resource')
+                  .loader('style-resources-loader')
+                  .options({ patterns })
+  }
+}

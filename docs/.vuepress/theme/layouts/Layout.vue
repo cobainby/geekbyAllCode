@@ -1,123 +1,76 @@
 <template>
-  <div
-    class="theme-container"
-    :class="pageClasses"
-    @touchstart="onTouchStart"
-    @touchend="onTouchEnd"
-  >
-    <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar" />
-
-    <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
-
-    <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-      <slot name="sidebar-top" slot="top" />
-      <slot name="sidebar-bottom" slot="bottom" />
-    </Sidebar>
-
-    <Home v-if="$page.frontmatter.home" />
-
-    <Page v-else :sidebar-items="sidebarItems">
-      <slot name="page-top" slot="top" />
-      <slot name="page-bottom" slot="bottom" />
-    </Page>
-  </div>
+  <LayoutContainer>
+    <div class="top-banner" :style="{ 'background-image': `url(${maskBgUrl})`}">
+      <div class="top-banner-bg"></div>
+      <vue-particles
+        v-if="showParticles"
+        class="top-banner-mask"
+        color="#6d6d6d"
+        :particleOpacity="0.8"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="2"
+        linesColor="#6d6d6d"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.5"
+        :linesDistance="150"
+        :moveSpeed="2"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="pubsh"
+      ></vue-particles>
+    </div>
+    <List v-if="$pagination && $pagination.posts" :items="$pagination.posts" />
+    <Pagination />
+  </LayoutContainer>
 </template>
 
 <script>
-import Home from "@theme/components/Home.vue";
-import Navbar from "@theme/components/Navbar.vue";
-import Page from "@theme/components/Page.vue";
-import Sidebar from "@theme/components/Sidebar.vue";
-import { resolveSidebarItems } from "../util";
-
-export default {
-  components: { Home, Page, Sidebar, Navbar },
-
-  data() {
-    return {
-      isSidebarOpen: false
-    };
-  },
-
-  computed: {
-    shouldShowNavbar() {
-      const { themeConfig } = this.$site;
-      const { frontmatter } = this.$page;
-      if (frontmatter.navbar === false || themeConfig.navbar === false) {
-        return false;
+  import Vue from 'vue'
+  import maskBgUrl from '../assets/images/world.png'
+  export default {
+    data () {
+      return {
+        maskBgUrl,
+        showParticles: false
       }
-      return (
-        this.$title ||
-        themeConfig.logo ||
-        themeConfig.repo ||
-        themeConfig.nav ||
-        this.$themeLocaleConfig.nav
-      );
     },
-
-    shouldShowSidebar() {
-      const { frontmatter } = this.$page;
-      return (
-        !frontmatter.home &&
-        frontmatter.sidebar !== false &&
-        this.sidebarItems.length
-      );
-    },
-
-    sidebarItems() {
-      return resolveSidebarItems(
-        this.$page,
-        this.$page.regularPath,
-        this.$site,
-        this.$localePath
-      );
-    },
-
-    pageClasses() {
-      const userPageClass = this.$page.frontmatter.pageClass;
-      return [
-        {
-          "no-navbar": !this.shouldShowNavbar,
-          "sidebar-open": this.isSidebarOpen,
-          "no-sidebar": !this.shouldShowSidebar
-        },
-        userPageClass
-      ];
-    }
-  },
-
-  mounted() {
-    this.$router.afterEach(() => {
-      this.isSidebarOpen = false;
-    });
-  },
-
-  methods: {
-    toggleSidebar(to) {
-      this.isSidebarOpen = typeof to === "boolean" ? to : !this.isSidebarOpen;
-    },
-
-    // side swipe
-    onTouchStart(e) {
-      this.touchStart = {
-        x: e.changedTouches[0].clientX,
-        y: e.changedTouches[0].clientY
-      };
-    },
-
-    onTouchEnd(e) {
-      const dx = e.changedTouches[0].clientX - this.touchStart.x;
-      const dy = e.changedTouches[0].clientY - this.touchStart.y;
-      if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
-        if (dx > 0 && this.touchStart.x <= 80) {
-          this.toggleSidebar(true);
-        } else {
-          this.toggleSidebar(false);
-        }
-      }
+    mounted() {
+      // 动态引入
+      import('vue-particles').then(module => {
+        Vue.use(module.default)
+        this.$nextTick(() => (this.showParticles = true))
+      })
     }
   }
-};
 </script>
 
-<style src="prismjs/themes/prism-tomorrow.css"></style>
+<style lang="stylus">
+  .top-banner
+    position relative
+    height px2rem(250px)
+    background-repeat no-repeat
+    background-size cover
+    background-position top center
+    &-bg
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      background radial-gradient(circle, lighten($codeBgColor, 70%) 10%, transparent 10%)
+      background-size 10px 10px
+      opacity .8
+    &-mask
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+      z-index 1
+  @media (max-width: $MQNarrow)
+    .top-banner
+      height px2rem(200px)
+</style>

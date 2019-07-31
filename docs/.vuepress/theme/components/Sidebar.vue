@@ -1,27 +1,80 @@
 <template>
-  <aside class="sidebar">
-    <NavLinks/>
-    <slot name="top"/>
-    <SidebarLinks :depth="0" :items="items"/>
-    <slot name="bottom"/>
-  </aside>
+  <div class="sidebar-wrapper" v-sticky="{ zIndex: 90, stickyTop: 60, disabled: false }">
+    <div>
+      <div class="sidebar">
+        <slot name="top"/>
+        <ul class="sidebar-links" v-if="items.length">
+          <li v-for="(item, i) in items" :key="i">
+            <SidebarGroup
+              v-if="item.type === 'group'"
+              :item="item"
+              :first="i === 0"
+              :open="i === openGroupIndex"
+              :collapsable="item.collapsable || item.collapsible"
+              @toggle="toggleGroup(i)"
+            />
+            <SidebarLink v-else :item="item"/>
+          </li>
+        </ul>
+        <slot name="bottom"/>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import SidebarLinks from '@theme/components/SidebarLinks.vue'
-import NavLinks from '@theme/components/NavLinks.vue'
-
+import { isActive } from '../util'
 export default {
-  name: 'Sidebar',
-
-  components: { SidebarLinks, NavLinks },
-
-  props: ['items']
+  props: ['items'],
+  data () {
+    return {
+      openGroupIndex: 0
+    }
+  },
+  created () {
+    this.refreshIndex()
+  },
+  watch: {
+    '$route' () {
+      this.refreshIndex()
+    }
+  },
+  methods: {
+    refreshIndex () {
+      const index = resolveOpenGroupIndex(
+        this.$route,
+        this.items
+      )
+      if (index > -1) {
+        this.openGroupIndex = index
+      }
+    },
+    toggleGroup (index) {
+      this.openGroupIndex = index === this.openGroupIndex ? -1 : index
+    },
+    isActive (page) {
+      return isActive(this.$route, page.regularPath)
+    }
+  }
+}
+function resolveOpenGroupIndex (route, items) {
+  for (let i = 0; i < items.length; i++) {
+    const item = items[i]
+    if (item.type === 'group' && item.children.some(c => isActive(route, c.path))) {
+      return i
+    }
+  }
+  return -1
 }
 </script>
 
 <style lang="stylus">
 .sidebar
+  &-wrapper
+    width 12rem
+    float left
+    max-height "calc(100vh - %s)" % $navbarHeight
+    overflow-y auto
   ul
     padding 0
     margin 0
@@ -39,21 +92,15 @@ export default {
       line-height 1.25rem
       font-size 1.1em
       padding 0.5rem 0 0.5rem 1.5rem
-  & > .sidebar-links
+  .sidebar-links
     padding 1.5rem 0
-    & > li > a.sidebar-link
-      font-size 1.1em
-      line-height 1.7
-      font-weight bold
-    & > li:not(:first-child)
-      margin-top .75rem
-
 @media (max-width: $MQMobile)
   .sidebar
+    display none
     .nav-links
       display block
       .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after
         top calc(1rem - 2px)
-    & > .sidebar-links
+    .sidebar-links
       padding 1rem 0
 </style>
