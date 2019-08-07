@@ -4,8 +4,6 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
-  base:'/by/',
-  dest:'by',
   theme: 'track',
   port: 3000,
   // Google Analytics ID
