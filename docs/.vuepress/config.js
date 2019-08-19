@@ -1,6 +1,7 @@
 module.exports = {
   title: '橘子辉煌',
   description: '太阳强烈，水波温柔',
+  base:'/by/',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
