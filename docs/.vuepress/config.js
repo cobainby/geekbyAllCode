@@ -1,7 +1,6 @@
 module.exports = {
   title: '橘子辉煌',
   description: '太阳强烈，水波温柔',
-  base:'/by/',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
@@ -51,7 +50,7 @@ module.exports = {
     },
     // 和 vuepress 默认主题一样, 定制导航栏上的链接
     nav: [
-        { text: '首页', link: '', root: true }, // 指定它为博客根目录
+        { text: '首页', link: '/', root: true }, // 指定它为博客根目录
         { text: '前端daily', link: '/webdaily/', root: true }, // 指定它为标签目录
         { text: '疑惑困难', link: '/problems/' }, // 指定它为标签目录
         { text: '工具收藏', link: '/tools/' }, // 指定它为标签目录
