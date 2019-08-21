@@ -8,7 +8,7 @@
 
 [more screenshot](./screenshot/home.jpg)
 
-[Live Demo](https://kuaizi-co.github.io/blog/track.html)
+[Live Demo](https://baiyang-co.github.io/blog/track.html)
 
 ## USAGE
 
@@ -79,7 +79,7 @@ module.exports = {
     // navLinks
     nav: [
         { text: '首页', link: '/'}, // home
-        { text: '周刊', link: '/weekly/'}, // blog
+        { text: 'blog', link: '/weekly/'}, // blog
         { text: '分类', link: '/category/' }, // category
         { text: '标签', link: '/tag/' }, // tag
         { text: '关于我们', link: '/about' },

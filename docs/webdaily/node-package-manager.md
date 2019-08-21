@@ -104,7 +104,7 @@ npm version major
 
 #### 版本管理工具 release-it
 
-[demo](https://github.com/Kuaizi-co/vue-cli-plugin-auto-router/blob/dev/package.json#L13)
+[demo](https://github.com/baiyang-co/vue-cli-plugin-auto-router/blob/dev/package.json#L13)
 
 ```
 λ npm run release
@@ -139,10 +139,10 @@ npm dist-tag rm <pkg> <tag>
 npm dist-tag ls [<pkg>]
 ```
 
-比如，查看`@kuaizi/kz-ui`
+比如，查看`@baiyang/kz-ui`
 
 ```
-npm dist-tag ls @kuaizi/kz-ui
+npm dist-tag ls @baiyang/kz-ui
 alpha: 2.0.0-alpha
 beta: 2.9.0-beta
 latest: 2.9.2
@@ -152,7 +152,7 @@ next: 2.0.0-alpha.26
 安装某个标签的最新版本
 
 ```
-yarn add @kuaizi/kz-ui@beta
+yarn add @baiyang/kz-ui@beta
 ```
 
 安装成功后，我们可以查看 `package.json`
@@ -160,7 +160,7 @@ yarn add @kuaizi/kz-ui@beta
 ```
 {
  "dependencies": {
-    "@kuaizi/kz-ui": "^2.9.0-beta"
+    "@baiyang/kz-ui": "^2.9.0-beta"
   }
 }
 ```
@@ -275,7 +275,7 @@ npm 模块是支持增加类似命名空间的 `scoped`域，通过在模块名�
     "release-it": "^12.0.1"
   },
   "dependencies": {
-    "@kuaizi/kz-ui": "^2.9.0-beta"
+    "@baiyang/kz-ui": "^2.9.0-beta"
   }
 }
 
@@ -309,7 +309,7 @@ npm publish --access=publish
     "release-it": "^12.0.1"
   },
   "dependencies": {
-    "@kuaizi/kz-ui": "^2.9.0-beta"
+    "@baiyang/kz-ui": "^2.9.0-beta"
   },
   "publishConfig": {
     "access": "public"
@@ -361,5 +361,5 @@ lerna publish
 
 案例：
 
-* [cep](https://github.com/Kuaizi-co/cep)
-* [@kuaizi/i18n](https://github.com/Kuaizi-co/i18n)
+* [cep](https://github.com/baiyang-co/cep)
+* [@baiyang/i18n](https://github.com/baiyang-co/i18n)

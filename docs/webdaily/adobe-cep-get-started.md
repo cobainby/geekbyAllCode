@@ -15,7 +15,7 @@ meta:
       name: keywords
       content: adobe cep,cep开发,adobe插件
 author: tomieric
-poster: https://raw.githubusercontent.com/kuaizi-ai/pic/master/img/Adobe-logo.png
+poster: https://raw.githubusercontent.com/baiyang-ai/pic/master/img/Adobe-logo.png
 ---
 
 # Adobe-CEP  插件开发
@@ -29,7 +29,7 @@ poster: https://raw.githubusercontent.com/kuaizi-ai/pic/master/img/Adobe-logo.pn
 一个 CEP 插件实际上是一个在显示在宿主程序面板窗口中的网页，通过 CEP 提供的接口与宿主程序进行交互。这里要分清 CEP 扩展与宿主应用的关系。所谓宿主，就是载入 CEP 扩展的应用，例如一个运行在 PhotoShop 中的 CEP 扩展，它的宿主程序就是 PhotoShop ，作为宿主程序的 PhotoShop 有很多内置功能，和一个被称为 ExtendScript 的脚本引擎，通过 ExtendScript 脚本引擎能够调用各种 PhotoShop 的内置功能，比如创建一个图层、设置背景颜色等等。要注意的是 CEP 和 ExtendScript  都使用 JavaScript 但是它们分别运行在两个虚拟机中，并不在一个上下文中，所以互相是独立的。
 另外，一个 CEP 扩展可以同时被多个宿主运行。
 
-![](https://raw.githubusercontent.com/kuaizi-ai/pic/master/img/71097-0e7f47c8e153f165.png)
+![](https://raw.githubusercontent.com/baiyang-ai/pic/master/img/71097-0e7f47c8e153f165.png)
 
 Adobe-CEP扩展插件需具备的知识技能点：
 
@@ -65,9 +65,9 @@ Adobe-CEP扩展插件需具备的知识技能点：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="ai.kuaizi.www" ExtensionBundleVersion="1.0" Version="6.0"> <!-- MAJOR-VERSION-UPDATE-MARKER -->
+<ExtensionManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ExtensionBundleId="ai.baiyang.www" ExtensionBundleVersion="1.0" Version="6.0"> <!-- MAJOR-VERSION-UPDATE-MARKER -->
     <ExtensionList>
-        <Extension Id="ai.kuaizi.www" Version="0.1.0"/> <!-- 设置扩展 ID-->
+        <Extension Id="ai.baiyang.www" Version="0.1.0"/> <!-- 设置扩展 ID-->
     </ExtensionList>
 
     <ExecutionEnvironment>
@@ -86,7 +86,7 @@ Adobe-CEP扩展插件需具备的知识技能点：
         </RequiredRuntimeList>
     </ExecutionEnvironment>
     <DispatchInfoList>
-        <Extension Id="ai.kuaizi.www.cep"> <!-- 为 new_panel 设置属性-->
+        <Extension Id="ai.baiyang.www.cep"> <!-- 为 new_panel 设置属性-->
             <DispatchInfo>
                 <Resources>
                     <MainPath>./index.html</MainPath> <!-- 指定起始载入的网页-->
@@ -122,7 +122,7 @@ Adobe-CEP扩展插件需具备的知识技能点：
         </Extension>
     </DispatchInfoList>
     <Author>tomieric</Author> <!-- 作者信息-->
-    <Abstract>tomieric, kuaizi.ai</Abstract> <!-- 扩展描述-->
+    <Abstract>tomieric, baiyang.ai</Abstract> <!-- 扩展描述-->
 </ExtensionManifest>
 ```
 
@@ -242,28 +242,28 @@ function openDocument(){
 
 [http://localhost:8900/](http://localhost:8900)
 
-![](https://raw.githubusercontent.com/kuaizi-ai/pic/master/img/remote-debug.png)
+![](https://raw.githubusercontent.com/baiyang-ai/pic/master/img/remote-debug.png)
 
 #### ExtendScript 调试
 
 Adobe ExtendScript Toolkit CC  工具可以直接调试 `ExtendScript` 后台代码，在里面可以编辑 ExtendScript  并让其在指定的宿主应用中运行，而且重要的是可以通过 Data Browser 查看实时查看宿主应用的 DOM。
 
-![](https://raw.githubusercontent.com/kuaizi-ai/pic/master/img/extend-script.png)
+![](https://raw.githubusercontent.com/baiyang-ai/pic/master/img/extend-script.png)
 
 
 
 ## 基于 vue 开发扩展插件
 
-使用 `@kuaizi/vue-cli-plugin-cep`插件为 `vue` 项目创建模板。首先使用 `vue-cli` 创建项目。
+使用 `@baiyang/vue-cli-plugin-cep`插件为 `vue` 项目创建模板。首先使用 `vue-cli` 创建项目。
 
 ```bash
 > vue create demo-cep
 > cd demo-cep
-> vue add @kuaizi/vue-cli-plugin-cep
+> vue add @baiyang/vue-cli-plugin-cep
 > yarn serve
 ```
 
-![](https://raw.githubusercontent.com/kuaizi-ai/pic/master/img/vue.png)
+![](https://raw.githubusercontent.com/baiyang-ai/pic/master/img/vue.png)
 
 基本插件文件夹 `/public/cep`, 使用软链映射到 `C:\Users\tommyshao\AppData\Roaming\Adobe\CEP\extensions` , 前端入口界面做链接跳转:
 
@@ -286,7 +286,7 @@ Adobe ExtendScript Toolkit CC  工具可以直接调试 `ExtendScript` 后台代
 
 成功案例：筷子云制作
 
-![](https://raw.githubusercontent.com/kuaizi-ai/pic/master/img/kuaizi-cloud.jpg)
+![](https://raw.githubusercontent.com/baiyang-ai/pic/master/img/baiyang-cloud.jpg)
 
 ## 插件的安装包构建
 
@@ -388,6 +388,6 @@ app.on('activate', function () {
 ## 参考
 
 * [adobe-cep插件教程](http://nullice.com/archives/category/note/软件教程/adobe-cep)
-* [cep-awesome](https://github.com/Kuaizi-co/cep-awesome)
+* [cep-awesome](https://github.com/baiyang-co/cep-awesome)
 * [Adobe-CEP](https://github.com/Adobe-CEP)
 

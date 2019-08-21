@@ -97,14 +97,14 @@ vue组件自动注册
 ## 安装
 
 ```javascript
-> npm i stall @kuaizi/vue-cli-plugin-register-component
+> npm i stall @baiyang/vue-cli-plugin-register-component
 ```
 
 ## 使用
 
 ```javascript
 # webpack.config.js
-const vueRegisterComponentWebpackPlugin = require('@kuaizi/vue-cli-plugin-register-component')
+const vueRegisterComponentWebpackPlugin = require('@baiyang/vue-cli-plugin-register-component')
 
 export default {
   plugins: [

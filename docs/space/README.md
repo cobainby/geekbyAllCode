@@ -1,5 +1,5 @@
 ---
-title: 前端周刊
+title: 前端blog
 date: '2018-12-21 09:09:43'
 tag:
 meta:
@@ -9,7 +9,7 @@ meta:
   -
     name: keywords
     content: kz-fe
-author: kuaizi-co
+author: baiyang-co
 poster: https://tomieric.github.io/assets/images/background.jpg
 pageLayout: Weekly
 ---

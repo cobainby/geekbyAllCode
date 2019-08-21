@@ -46,7 +46,7 @@ author: tomieric
 
 ```javascript
 module.exports = {
-  title: '前端周刊',
+  title: '前端blog',
   description: '每周分享前端知识',
   base: '/blog/',
   head: [
@@ -102,7 +102,7 @@ module.exports = {
     // navLinks
     nav: [
         { text: '首页', link: '/'}, // home
-        { text: '周刊', link: '/weekly/'}, // blog
+        { text: 'blog', link: '/weekly/'}, // blog
         { text: '分类', link: '/category/' }, // category
         { text: '标签', link: '/tag/' }, // tag
         { text: '关于我们', link: '/about' },

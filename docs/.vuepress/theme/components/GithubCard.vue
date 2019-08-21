@@ -23,7 +23,7 @@
     props: {
       author: {
         type: String,
-        default: 'kuaizi-co'
+        default: 'baiyang-co'
       },
       size: {
         type: Number,
@@ -50,7 +50,7 @@
     },
     computed: {
       authorAvatar () {
-        return 'https://github.com/'+ (this.author || 'Kuaizi-co') +'.png?size=' + (this.size || 50)
+        return 'https://github.com/'+ (this.author || 'baiyang-co') +'.png?size=' + (this.size || 50)
       }
     }
   }

@@ -9,7 +9,7 @@
       <ListContainer
         v-if="$weeklies && $weeklies.length"
         :list="$weeklies"
-        title="周刊" 
+        title="blog" 
         type="weekly"
       />
     </contentWrapper>

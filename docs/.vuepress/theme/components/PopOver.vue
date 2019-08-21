@@ -153,7 +153,7 @@
           return this.top + 6
         },
         authorAvatar () {
-          return 'https://github.com/'+ (this.user || 'Kuaizi-co') +'.png?size=' + (this.top || 50)
+          return 'https://github.com/'+ (this.user || 'baiyang-co') +'.png?size=' + (this.top || 50)
         }
       },
       methods: {

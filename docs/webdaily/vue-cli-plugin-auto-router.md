@@ -38,7 +38,7 @@ poster: https://tomieric.github.io/assets/images/background.jpg
 ## 使用
 
 ```
-vue add @kuaizi/vue-cli-plugin-auto-router
+vue add @baiyang/vue-cli-plugin-auto-router
 ```
 
 默认页面文件夹为 `./src/pages/*/views/`，自定义需要添加配置 `package.json` 中的 `autoRouterConf` 字段
@@ -156,7 +156,7 @@ module.exports = {
     rules: [
       {
         resourceQuery: /blockType=route-meta/,
-        loader: require.resolve('@kuaizi/vue-cli-auto-router/meta-loader.js')
+        loader: require.resolve('@baiyang/vue-cli-auto-router/meta-loader.js')
       }
     ]
   }

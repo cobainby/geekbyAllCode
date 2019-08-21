@@ -1,14 +1,14 @@
 ---
 title: weekly 
-heroText: 前端周刊 # title
+heroText: 前端blog # title
 layout: Layout
 pageLayout: Layout
 type: false
 hidden: true # 设置是否在文章列表中显示
-tagline: Kuaizi FED 团队知识分享 # 描述
+tagline: baiyang FED 团队知识分享 # 描述
 heroImage: /images/wallhaven-699858.jpg # logo
 # 参考官方默认主题的配置
-actionText: 查看周刊 →  
+actionText: 查看blog →  
 actionLink: /weekly/ # action 链接
 features:
   - title: DRY
