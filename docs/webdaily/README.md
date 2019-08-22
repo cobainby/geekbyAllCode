@@ -5,10 +5,10 @@ layout: Layout
 pageLayout: Layout
 type: false
 hidden: true # 设置是否在文章列表中显示
-tagline: baiyang FED 团队知识分享 # 描述
-heroImage: /images/wallhaven-699858.jpg # logo
+tagline: baiyang's blog # 描述
+heroImage: /images/wallhaven-672846.jpg # logo
 # 参考官方默认主题的配置
-actionText: 查看blog →  
+actionText: 进来玩呀 →  
 actionLink: /weekly/ # action 链接
 features:
   - title: DRY

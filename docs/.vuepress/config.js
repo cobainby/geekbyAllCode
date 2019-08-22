@@ -4,8 +4,8 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
-  theme: 'track',
   port: 3000,
+  theme:'track',
   // Google Analytics ID
   ga: 'UA-130602776-1',
   // PWA support
