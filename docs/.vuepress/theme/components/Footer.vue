@@ -2,8 +2,8 @@
   <div class="theme-track--footer">
     <p v-if="$themeConfig.footer" v-html="$themeConfig.footer"></p>
     <p>
-    Powered by vuepress theme <a href="//github.com/tomieric/vuepress-theme-track" target="_blank">Track</a>.
-    Inspired by <a href="//github.com/Yubisaki/vuepress-theme-yubisaki" target="_blank">yubisaki</a>
+    Powered by vuepress theme <a href="" target="_blank">Track</a>.
+    Inspired by <a href="" target="_blank">yubisaki</a>
     </p>
   </div>
 </template>
