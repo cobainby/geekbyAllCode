@@ -5,7 +5,7 @@ layout: Home
 pageLayout: Home
 type: false
 hidden: true # 设置是否在文章列表中显示
-tagline: baiyang's home # 描述
+tagline: baiyang's house # 描述
 heroImage: /images/wallhaven-672846.jpg # logo
 # 参考官方默认主题的配置
 actionText: 维护中→  
