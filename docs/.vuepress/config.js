@@ -68,7 +68,7 @@ module.exports = {
   plugins: [
     ['@tomieric/vuepress-plugin-rss',
       {
-        site_url: 'https://baiyang-co.github.io/blog', // required
+        site_url: 'https://cobainby.github.io/blog', // required
         copyright: '@2018 - present www.baiyang.ai', // optional
         filter: ({ frontmatter }) => frontmatter.type === 'weekly' || (frontmatter.type === 'post' && frontmatter.sidebar !== false),
         count: 20

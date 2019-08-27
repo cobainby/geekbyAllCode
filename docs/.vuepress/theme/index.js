@@ -12,7 +12,7 @@ module.exports = {
         path.resolve(__dirname, 'components')
       ]
     }],
-    ['@yubisaki', {
+    ['@yubisaki/blog', {
       pageEnhancers: [
         {
           when: ({ frontmatter }) => frontmatter.pageLayout === 'Activity',
