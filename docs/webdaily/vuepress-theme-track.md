@@ -102,7 +102,7 @@ module.exports = {
     // navLinks
     nav: [
         { text: '首页', link: '/'}, // home
-        { text: 'blog', link: '/weekly/'}, // blog
+        { text: 'blog', link: '/webdaily/'}, // blog
         { text: '分类', link: '/category/' }, // category
         { text: '标签', link: '/tag/' }, // tag
         { text: '关于我们', link: '/about' },

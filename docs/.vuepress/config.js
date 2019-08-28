@@ -4,6 +4,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
+  base:"byBlog",
   port: 3000,
   theme:'track',
   // Google Analytics ID
@@ -51,7 +52,7 @@ module.exports = {
     // 和 vuepress 默认主题一样, 定制导航栏上的链接
     nav: [
         { text: '首页', link: '/', root: true }, // 指定它为博客根目录
-        { text: '前端daily', link: '/webdaily/', root: true }, // 指定它为标签目录
+        { text: '前端daily', link: '/webdaily/'}, // 指定它为标签目录
         { text: '疑惑困难', link: '/problems/' }, // 指定它为标签目录
         { text: '工具收藏', link: '/tools/' }, // 指定它为标签目录
         { text: '随便', link: '/space/' }, // 指定它为标签目录
@@ -64,15 +65,5 @@ module.exports = {
     // 周刊为团队发布，因此设置为 true
     // 个人博客则不显示作者组件
     showAuthor: true
-  },
-  plugins: [
-    ['@tomieric/vuepress-plugin-rss',
-      {
-        site_url: 'https://cobainby.github.io/blog', // required
-        copyright: '@2018 - present www.baiyang.ai', // optional
-        filter: ({ frontmatter }) => frontmatter.type === 'weekly' || (frontmatter.type === 'post' && frontmatter.sidebar !== false),
-        count: 20
-      }
-    ]
-  ]
+  }
 }

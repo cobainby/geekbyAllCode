@@ -19,7 +19,9 @@
   import 'nprogress/nprogress.css'
   export default {
     mounted () {
+      debugger
       this.$router.beforeEach((to, from, next) => {
+        debugger
         if (to.path !== from.path && !Vue.component(to.name)) {
           nprogress.start()
         }

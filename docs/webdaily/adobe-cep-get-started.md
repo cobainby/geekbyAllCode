@@ -15,7 +15,6 @@ meta:
       name: keywords
       content: adobe cep,cep开发,adobe插件
 author: tomieric
-poster: https://raw.githubusercontent.com/baiyang-ai/pic/master/img/Adobe-logo.png
 ---
 
 # Adobe-CEP  插件开发
