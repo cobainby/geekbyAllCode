@@ -13,7 +13,6 @@ module.exports = (options, ctx) => {
     ],
 
     extendPageData (pageCtx) {
-      debugger
       const { frontmatter: rawFrontmatter } = pageCtx
       pageEnhancers.forEach(({
         when,
@@ -28,7 +27,6 @@ module.exports = (options, ctx) => {
     },
 
     ready () {
-      debugger
       const { pages } = ctx
       const weeklyMap = []
 

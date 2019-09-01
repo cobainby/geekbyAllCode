@@ -60,7 +60,7 @@
       left 0
       right 0
       bottom 0
-      background radial-gradient(circle, lighten($codeBgColor, 70%) 10%, transparent 10%)
+      // background radial-gradient(circle, lighten($codeBgColor, 70%) 10%, transparent 10%)
       background-size 10px 10px
       opacity .8
     &-mask

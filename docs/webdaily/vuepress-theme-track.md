@@ -1,6 +1,6 @@
 ---
 title: vuepress-theme-track
-date: '2018-11-24 07:09:43'
+date: '2006-11-24 07:09:43'
 type: post
 tag: 
   - vue
