@@ -8,7 +8,7 @@ meta:
     content: 筷子科技
   -
     name: keywords
-    content: kz-fe
+    content: baiyang
 author: baiyang-co
 poster: https://tomieric.github.io/assets/images/background.jpg
 pageLayout: Weekly

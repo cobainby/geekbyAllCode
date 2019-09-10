@@ -44,7 +44,7 @@ module.exports = {
       clientSecret: 'b3fb7f071fe80dc7a16ae346b770797fe0b4bb50',
       repo: 'blog',
       owner: 'baiyang',
-      admin: ['kz-fe', 'tomieric'],
+      admin: ['baiyang', 'tomieric'],
       // perPage: 5,
       // id: 'comment',      // Ensure uniqueness and length less than 50
       distractionFreeMode: false  // Facebook-like distraction free mode
