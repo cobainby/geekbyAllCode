@@ -8,7 +8,7 @@
 ```js
 if(option.extract){
   return ExtractTextPlugin.extract({
-    use:loaders,
+    use:loaders, 
     publicPath:'../../', //注意配置这一部分，根据目录结构自由调整
     fallback:'vue-style-loader'
    })
