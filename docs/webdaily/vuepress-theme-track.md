@@ -14,7 +14,7 @@ meta:
   -
     name: keywords
     content: vuepress-them,track
-author: tomieric
+author: cobainby
 ---
 
 # vuepress-theme-track
@@ -74,7 +74,7 @@ module.exports = {
     footer: 'MIT Licensed | Copyright © 2018-present tommyshao',
     // github card
     // github account name
-    github: 'tomieric',
+    github: 'cobainby',
     // logo
     logo: '/images/logo.png',
     // homepage logo
@@ -92,9 +92,9 @@ module.exports = {
     comment: {
       clientID: '',
       clientSecret: '',
-      repo: 'https://github.com/tomieric/vuepress-theme-track.git',
-      owner: 'tomieric',
-      admin: ['tomieric'],
+      repo: 'https://github.com/cobainby/vuepress-theme-track.git',
+      owner: 'cobainby',
+      admin: ['cobainby'],
       perPage: 5,
       // id: 'comment',      // Ensure uniqueness and length less than 50
       distractionFreeMode: false  // Facebook-like distraction free mode

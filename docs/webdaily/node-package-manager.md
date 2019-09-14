@@ -13,7 +13,7 @@ meta:
   -
     name: keywords
     content: 前端,npm,lerna
-author: tomieric
+author: cobainby
 poster: /images/v2-a249c1ec19957248e6187692d0db7047_r.jpg
 ---
 
@@ -104,7 +104,7 @@ npm version major
 
 #### 版本管理工具 release-it
 
-[demo](https://github.com/baiyang-co/vue-cli-plugin-auto-router/blob/dev/package.json#L13)
+[demo](https://github.com/cobainby-co/vue-cli-plugin-auto-router/blob/dev/package.json#L13)
 
 ```
 λ npm run release
@@ -139,10 +139,10 @@ npm dist-tag rm <pkg> <tag>
 npm dist-tag ls [<pkg>]
 ```
 
-比如，查看`@baiyang/kz-ui`
+比如，查看`@cobainby/kz-ui`
 
 ```
-npm dist-tag ls @baiyang/kz-ui
+npm dist-tag ls @cobainby/kz-ui
 alpha: 2.0.0-alpha
 beta: 2.9.0-beta
 latest: 2.9.2
@@ -152,7 +152,7 @@ next: 2.0.0-alpha.26
 安装某个标签的最新版本
 
 ```
-yarn add @baiyang/kz-ui@beta
+yarn add @cobainby/kz-ui@beta
 ```
 
 安装成功后，我们可以查看 `package.json`
@@ -160,7 +160,7 @@ yarn add @baiyang/kz-ui@beta
 ```
 {
  "dependencies": {
-    "@baiyang/kz-ui": "^2.9.0-beta"
+    "@cobainby/kz-ui": "^2.9.0-beta"
   }
 }
 ```
@@ -196,17 +196,17 @@ npm ERR! A complete log of this run can be found in:
 npm ERR!     C:\Users\wuhaiyang\AppData\Roaming\npm-cache\_logs\2019-05-13T06_21_55_910Z-debug.log
 ```
 
-提示没有权限操作`mypack`模块，我们查看一下 `package.json`，修改 `name` 为 `mypack-test-by-tomieric`再次发布。
+提示没有权限操作`mypack`模块，我们查看一下 `package.json`，修改 `name` 为 `mypack-test-by-cobainby`再次发布。
 
 ```
 λ npm publish --tag alpha
 npm notice
-npm notice package: mypack-test-by-tomieric@2.0.0
+npm notice package: mypack-test-by-cobainby@2.0.0
 npm notice === Tarball Contents ===
 npm notice 531B    package.json
 npm notice 122.6kB yarn.lock
 npm notice === Tarball Details ===
-npm notice name:          mypack-test-by-tomieric
+npm notice name:          mypack-test-by-cobainby
 npm notice version:       2.0.0
 npm notice package size:  40.9 kB
 npm notice unpacked size: 123.2 kB
@@ -214,10 +214,10 @@ npm notice shasum:        419b2fd5254c45931dd34f7cfa581327e3b475d4
 npm notice integrity:     sha512-wmvrAndGVIcBc[...]4aMKGmJ51rURg==
 npm notice total files:   2
 npm notice
-+ mypack-test-by-tomieric@2.0.0
++ mypack-test-by-cobainby@2.0.0
 ```
 
-打开[//npmjs.com](//npmjs.com),进入自己的包列表, [https://www.npmjs.com/package/mypack-test-by-tomieric](https://www.npmjs.com/package/mypack-test-by-tomieric)
+打开[//npmjs.com](//npmjs.com),进入自己的包列表, [https://www.npmjs.com/package/mypack-test-by-cobainby](https://www.npmjs.com/package/mypack-test-by-cobainby)
 
 
 ## npm unpublish 撤销已发布模块或版本
@@ -228,12 +228,12 @@ v2.0.1
 
  npm publish
 npm notice
-npm notice package: mypack-test-by-tomieric@2.0.1
+npm notice package: mypack-test-by-cobainby@2.0.1
 npm notice === Tarball Contents ===
 npm notice 531B    package.json
 npm notice 122.6kB yarn.lock
 npm notice === Tarball Details ===
-npm notice name:          mypack-test-by-tomieric
+npm notice name:          mypack-test-by-cobainby
 npm notice version:       2.0.1
 npm notice package size:  40.9 kB
 npm notice unpacked size: 123.2 kB
@@ -241,10 +241,10 @@ npm notice shasum:        8024ad91f77ab50477db603c33de9c58c8eff542
 npm notice integrity:     sha512-mc8HPQGiCQtc6[...]wfaUvNcs+6Jxw==
 npm notice total files:   2
 npm notice
-+ mypack-test-by-tomieric@2.0.1
++ mypack-test-by-cobainby@2.0.1
 
-npm unpublish mypack-test-by-tomieric@2.0.1
--mypack-test-by-tomieric@2.0.1
+npm unpublish mypack-test-by-cobainby@2.0.1
+-mypack-test-by-cobainby@2.0.1
 ```
 
 ## npm publish scoped packages
@@ -257,7 +257,7 @@ npm 模块是支持增加类似命名空间的 `scoped`域，通过在模块名�
 # package.json
 
 {
-  "name": "@tomieric/mypack",
+  "name": "@cobainby/mypack",
   "version": "2.0.1",
   "description": "",
   "main": "index.js",
@@ -266,7 +266,7 @@ npm 模块是支持增加类似命名空间的 `scoped`域，通过在模块名�
     "release": "release-it"
   },
   "keywords": [],
-  "author": "tomieric <tomieric@gmail.com>",
+  "author": "cobainby <cobainby@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@release-it/conventional-changelog": "^1.0.0",
@@ -275,7 +275,7 @@ npm 模块是支持增加类似命名空间的 `scoped`域，通过在模块名�
     "release-it": "^12.0.1"
   },
   "dependencies": {
-    "@baiyang/kz-ui": "^2.9.0-beta"
+    "@cobainby/kz-ui": "^2.9.0-beta"
   }
 }
 
@@ -291,7 +291,7 @@ npm publish --access=publish
 
 ```js
 {
-  "name": "@tomieric/mypack",
+  "name": "@cobainby/mypack",
   "version": "2.0.1",
   "description": "",
   "main": "index.js",
@@ -300,7 +300,7 @@ npm publish --access=publish
     "release": "release-it"
   },
   "keywords": [],
-  "author": "tomieric <tomieric@gmail.com>",
+  "author": "cobainby <cobainby@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@release-it/conventional-changelog": "^1.0.0",
@@ -309,7 +309,7 @@ npm publish --access=publish
     "release-it": "^12.0.1"
   },
   "dependencies": {
-    "@baiyang/kz-ui": "^2.9.0-beta"
+    "@cobainby/kz-ui": "^2.9.0-beta"
   },
   "publishConfig": {
     "access": "public"
@@ -317,7 +317,7 @@ npm publish --access=publish
 }
 ```
 
-[https://www.npmjs.com/package/@tomieric/mypack](https://www.npmjs.com/package/@tomieric/mypack)
+[https://www.npmjs.com/package/@cobainby/mypack](https://www.npmjs.com/package/@cobainby/mypack)
 
 ### `yarn link` vs `npm link` 调试包
 
@@ -361,5 +361,5 @@ lerna publish
 
 案例：
 
-* [cep](https://github.com/baiyang-co/cep)
-* [@baiyang/i18n](https://github.com/baiyang-co/i18n)
+* [cep](https://github.com/cobainby-co/cep)
+* [@cobainby/i18n](https://github.com/cobainby-co/i18n)

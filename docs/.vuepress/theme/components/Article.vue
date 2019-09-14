@@ -57,7 +57,7 @@
     },
     computed: {
       authorAvatar () {
-        return 'https://github.com/'+ (this.post.frontmatter.author || 'baiyang-co') +'.png?size=50'
+        return 'https://github.com/'+ (this.post.frontmatter.author || 'cobainby-co') +'.png?size=50'
       },
       date () {
         return this.post.frontmatter.date.split(' ')[0]

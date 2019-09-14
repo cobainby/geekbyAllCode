@@ -1,3 +1,18 @@
+---
+title: BLOG的重新出发 (2018-08-18)
+date: '2018-04-18 17:00:00'
+type: weekly
+tag:
+meta:
+  -
+    name: description
+    content: cobainby
+  -
+    name: keywords
+    content: cobainby
+author: cobainby-co
+poster: /images/weekly-4.jpeg
+---
 # BLOG的重新出发
 ### blog的前世今生
 很久以前，自己拥有一个用hexo搭建的个人网站:grin:，记得当时为了把它搞出来，也是花了很多功夫的💢，然后后来又断断续续更改过一些配置和样式。就在前不久Godady通知我我的域名不当操作被封禁了💩，我的第一反应是感到莫名的奇怪，然后在github上把之前写过的博客拷贝下来，打算重头开始搞一个blog😅。但是因为感觉hexo各种麻烦，而且在我看来并不好用👎😅，然而就在前段时间，我灵光一闪，为啥不用Vuepress呢😍，于是我就决定洗洗睡觉，抽空用Vuepress搭个静态博客，用来记录自己的所见所闻所想🎉。

@@ -19,7 +19,7 @@ meta:
   -
     name: keywords
     content: vue-cli,vue-cli-plugin,vue-cli-plugin-register-component,webpack,register-component
-author: tomieric
+author: cobainby
 poster: /images/post-5.jpg
 ---
 
@@ -97,14 +97,14 @@ vue组件自动注册
 ## 安装
 
 ```javascript
-> npm i stall @baiyang/vue-cli-plugin-register-component
+> npm i stall @cobainby/vue-cli-plugin-register-component
 ```
 
 ## 使用
 
 ```javascript
 # webpack.config.js
-const vueRegisterComponentWebpackPlugin = require('@baiyang/vue-cli-plugin-register-component')
+const vueRegisterComponentWebpackPlugin = require('@cobainby/vue-cli-plugin-register-component')
 
 export default {
   plugins: [

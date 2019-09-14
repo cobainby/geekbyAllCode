@@ -5,11 +5,11 @@ tag:
 meta:
   -
     name: description
-    content: 筷子科技
+    content: cobainby
   -
     name: keywords
-    content: baiyang
-author: baiyang-co
-poster: https://tomieric.github.io/assets/images/background.jpg
+    content: cobainby
+author: cobainby-co
+poster: https://cobainby.oss-cn-beijing.aliyuncs.com/beiying.jpg
 pageLayout: Weekly
 ---

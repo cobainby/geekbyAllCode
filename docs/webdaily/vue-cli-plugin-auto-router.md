@@ -19,8 +19,8 @@ meta:
   -
     name: keywords
     content: vue-cli,vue-cli-plugin,vue-cli-plugin-auto-router,webpack,auto router
-author: tomieric
-poster: https://tomieric.github.io/assets/images/background.jpg
+author: cobainby
+poster: https://cobainby.github.io/assets/images/background.jpg
 ---
 
 > 多页面自动路由 webpack 插件
@@ -38,7 +38,7 @@ poster: https://tomieric.github.io/assets/images/background.jpg
 ## 使用
 
 ```
-vue add @baiyang/vue-cli-plugin-auto-router
+vue add @cobainby/vue-cli-plugin-auto-router
 ```
 
 默认页面文件夹为 `./src/pages/*/views/`，自定义需要添加配置 `package.json` 中的 `autoRouterConf` 字段
@@ -156,7 +156,7 @@ module.exports = {
     rules: [
       {
         resourceQuery: /blockType=route-meta/,
-        loader: require.resolve('@baiyang/vue-cli-auto-router/meta-loader.js')
+        loader: require.resolve('@cobainby/vue-cli-auto-router/meta-loader.js')
       }
     ]
   }

@@ -13,7 +13,7 @@ meta:
   -
     name: keywords
     content: git
-author: tomieric
+author: cobainby
 poster: /images/post-4.jpg
 ---
 

@@ -43,8 +43,8 @@ module.exports = {
       clientID: '4bd9f5278b824687adfa',
       clientSecret: 'b3fb7f071fe80dc7a16ae346b770797fe0b4bb50',
       repo: 'blog',
-      owner: 'baiyang',
-      admin: ['baiyang', 'tomieric'],
+      owner: 'cobainby',
+      admin: ['cobainby', 'cobainby'],
       // perPage: 5,
       // id: 'comment',      // Ensure uniqueness and length less than 50
       distractionFreeMode: false  // Facebook-like distraction free mode
@@ -53,8 +53,6 @@ module.exports = {
     nav: [
         { text: '首页', link: '/', root: true }, // 指定它为博客根目录
         { text: '前端技术', link: '/webdaily/'}, // 指定它为标签目录
-        { text: '疑惑困难', link: '/problems/' }, // 指定它为标签目录
-        { text: '工具收藏', link: '/tools/' }, // 指定它为标签目录
         { text: '随笔', link: '/space/' }, // 指定它为标签目录
         { text: '关于我', link: '/about.html' }
     ],

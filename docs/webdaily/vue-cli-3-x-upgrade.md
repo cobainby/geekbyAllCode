@@ -15,7 +15,7 @@ meta:
   -
     name: keywords
     content: vue,vue-cli
-author: tomieric
+author: cobainby
 poster: /images/vue-cli-3-x.webp
 ---
 
@@ -30,15 +30,15 @@ poster: /images/vue-cli-3-x.webp
 
 * [安装](https://cli.vuejs.org/zh/guide/installation.html#%E5%AE%89%E8%A3%85)
 * [快速开发](https://cli.vuejs.org/zh/guide/prototyping.html#%E5%BF%AB%E9%80%9F%E5%8E%9F%E5%9E%8B%E5%BC%80%E5%8F%91)
-  - demo：[kz-table](https://github.com/baiyang-co/kz-table/blob/dev/package.json#L8)
+  - demo：[kz-table](https://github.com/cobainby-co/kz-table/blob/dev/package.json#L8)
 * [安装、插件和 Preset](https://cli.vuejs.org/zh/guide/plugins-and-presets.html#%E8%BF%9C%E7%A8%8B-preset)
-  - demo： [vue-cli-preset-kz](https://github.com/baiyang-co/vue-cli-preset-kz#vue-cli-preset-kz)
+  - demo： [vue-cli-preset-kz](https://github.com/cobainby-co/vue-cli-preset-kz#vue-cli-preset-kz)
 * [配置参考](https://cli.vuejs.org/zh/config/)
-  - demo：[vue.config.js](https://github.com/baiyang-co/vue-cli-preset-kz/blob/master/generator/templates/default/vue.config.js)
+  - demo：[vue.config.js](https://github.com/cobainby-co/vue-cli-preset-kz/blob/master/generator/templates/default/vue.config.js)
 * [插件开发指南](https://cli.vuejs.org/zh/dev-guide/plugin-dev.html#%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5)
-  - demo1：[vue-cli-plugin-auto-router](https://github.com/baiyang-co/vue-cli-plugin-auto-router/blob/dev/index.js)
-  - demo2：[vue-cli-plugin-register-component](https://github.com/baiyang-co/vue-cli-plugin-register-component/blob/dev/index.js)
-  - 展望：`@baiyang/vue-plugin-preset-kz`
+  - demo1：[vue-cli-plugin-auto-router](https://github.com/cobainby-co/vue-cli-plugin-auto-router/blob/dev/index.js)
+  - demo2：[vue-cli-plugin-register-component](https://github.com/cobainby-co/vue-cli-plugin-register-component/blob/dev/index.js)
+  - 展望：`@cobainby/vue-plugin-preset-kz`
 
 ## 如何将 `vue-cli 2.x` 项目升级到 `3.x`
 
@@ -378,7 +378,7 @@ cond(yes)->e
 @flowend
 
 
-* [详细文档](https://baiyang-co.github.io/kz-cli/command/update.html)
+* [详细文档](https://cobainby-co.github.io/kz-cli/command/update.html)
 
 ## 期待
 
