@@ -23,6 +23,7 @@ showAuthor: false
 
 
 ## 爱好
+basketball，music，geek
 
 
 
