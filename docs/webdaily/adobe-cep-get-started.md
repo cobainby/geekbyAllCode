@@ -387,6 +387,6 @@ app.on('activate', function () {
 ## 参考
 
 * [adobe-cep插件教程](http://nullice.com/archives/category/note/软件教程/adobe-cep)
-* [cep-awesome](https://github.com/cobainby-co/cep-awesome)
+* [cep-awesome](https://github.com/cobainby/cep-awesome)
 * [Adobe-CEP](https://github.com/Adobe-CEP)
 

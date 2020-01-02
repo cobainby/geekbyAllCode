@@ -104,7 +104,7 @@ npm version major
 
 #### 版本管理工具 release-it
 
-[demo](https://github.com/cobainby-co/vue-cli-plugin-auto-router/blob/dev/package.json#L13)
+[demo](https://github.com/cobainby/vue-cli-plugin-auto-router/blob/dev/package.json#L13)
 
 ```
 λ npm run release
@@ -361,5 +361,5 @@ lerna publish
 
 案例：
 
-* [cep](https://github.com/cobainby-co/cep)
-* [@cobainby/i18n](https://github.com/cobainby-co/i18n)
+* [cep](https://github.com/cobainby/cep)
+* [@cobainby/i18n](https://github.com/cobainby/i18n)

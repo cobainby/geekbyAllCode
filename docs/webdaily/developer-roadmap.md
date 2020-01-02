@@ -68,7 +68,7 @@ poster: /images/roadmap.jpg
 ### 渐进式 web 应用 （pwa）
 
 * PRPL 模式 [介绍](https://developers.google.com/web/fundamentals/performance/prpl-pattern/?hl=zh-cn)
-  * [preset](https://github.com/cobainby-co/vue-cli-preset-kz/blob/master/generator/templates/default/vue.config.js#L103)
+  * [preset](https://github.com/cobainby/vue-cli-preset-kz/blob/master/generator/templates/default/vue.config.js#L103)
   * [vue-router-prefetch](https://github.com/egoist/vue-router-prefetch) 
   * [饿了么的 PWA 升级实践](https://huangxuan.me/2017/07/12/upgrading-eleme-to-pwa/)
 * RAIL 模型 [介绍](https://developers.google.com/web/fundamentals/performance/rail)

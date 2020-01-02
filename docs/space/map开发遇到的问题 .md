@@ -10,7 +10,7 @@ meta:
   -
     name: keywords
     content: cobainby
-author: cobainby-co
+author: cobainby
 poster: /images/weekly-2.jpeg
 ---
 ## 阅读

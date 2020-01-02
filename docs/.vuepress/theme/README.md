@@ -8,7 +8,7 @@
 
 [more screenshot](./screenshot/home.jpg)
 
-[Live Demo](https://cobainby-co.github.io/blog/track.html)
+[Live Demo](https://cobainby.github.io/blog/track.html)
 
 ## USAGE
 

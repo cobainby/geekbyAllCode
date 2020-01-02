@@ -10,7 +10,7 @@ meta:
   -
     name: keywords
     content: cobainby
-author: cobainby-co
+author: cobainby
 poster: /images/weekly-4.jpeg
 ---
 # 解决Vue项目打包路径错误的问题

@@ -9,7 +9,7 @@ meta:
   -
     name: keywords
     content: cobainby
-author: cobainby-co
+author: cobainby
 poster: https://cobainby.oss-cn-beijing.aliyuncs.com/beiying.jpg
 pageLayout: Weekly
 ---
